@@ -5,6 +5,8 @@ import com.employee.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class EmployeeDAOImpl implements EmployeeDAO{
 
@@ -18,5 +20,14 @@ public class EmployeeDAOImpl implements EmployeeDAO{
             e.getMessage();
         }
         return emp;
+    }
+    public List<Employee> getAllEmployeeList() {
+        List<Employee> employeeList = null;
+        try{
+            employeeList = employeeRepository.findAll();
+        }catch (Exception e){
+            e.getMessage();
+        }
+        return employeeList;
     }
 }

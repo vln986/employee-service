@@ -6,18 +6,18 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "employee")
 public class Employee {
     @Id
-    private Integer id;
+    private String id;
     private String firstName;
     private String lastName;
-    private Integer age;
-    private double ctc;
+    private String age;
+    private String ctc;
     private String organization;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -37,19 +37,19 @@ public class Employee {
         this.lastName = lastName;
     }
 
-    public Integer getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
-    public double getCtc() {
+    public String getCtc() {
         return ctc;
     }
 
-    public void setCtc(double ctc) {
+    public void setCtc(String ctc) {
         this.ctc = ctc;
     }
 
